@@ -1,6 +1,19 @@
 package com.github.ftoresan.domain
 
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
+
 /**
- * Created by fabricio on 19/05/16.
+ * Created by Fabricio Toresan on 19/05/16.
  */
-data class Show (val id : Long, val name : String)
+@Entity
+class Show {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    var id: Long = 0
+
+    var name: String = ""
+}

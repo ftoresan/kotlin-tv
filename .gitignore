@@ -2,3 +2,5 @@
 /.gradle
 /.idea
 /build
+/lib
+kotlin-tv.iml
