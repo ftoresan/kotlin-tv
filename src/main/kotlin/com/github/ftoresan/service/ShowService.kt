@@ -11,5 +11,9 @@ interface ShowService {
 
     fun listAll() : Iterable<Show>
 
-    fun createShow(show : Show)
+    fun createShow(show : Show) : Show
+
+    fun findShow(id : Long) : Show?
+
+    fun updateShow(show : Show)
 }

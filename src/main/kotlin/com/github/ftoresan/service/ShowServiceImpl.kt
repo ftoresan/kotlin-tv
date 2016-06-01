@@ -11,11 +11,13 @@ import org.springframework.stereotype.Component
 @Component
 class ShowServiceImpl @Autowired constructor(val repository : ShowRepository) : ShowService {
 
-    override fun createShow(show: Show) {
+    override fun updateShow(show: Show) {
         repository.save(show)
     }
 
-    override fun listAll(): Iterable<Show> {
-        return repository.findAll()
-    }
+    override fun findShow(id: Long): Show? = repository.findOne(id)
+
+    override fun createShow(show: Show) = repository.save(show)
+
+    override fun listAll(): Iterable<Show> = repository.findAll()
 }
